@@ -1,0 +1,61 @@
+
+<h2 class="text-capitalize text-center">submit details</h2>
+
+<div class="container fs-5 mt-3">
+
+    <div class="border border-5 p-3 text-capitalize">
+        <form [formGroup]="formdata" (ngSubmit)="save(formdata.value)">
+            <label class="form-label">first Name:</label><br>
+            <input type="text" name="firstname" formControlName="firstname" class="form-control text-capitalize fs-5 fw-bold">
+            <span class="text-danger" *ngIf="formdata.controls.firstname.touched && formdata.controls.firstname.invalid">please enter first name</span><br>
+    
+            <label class="form-label">last Name:</label><br>
+            <input type="text" name="lastname" formControlName="lastname" class="form-control text-capitalize fs-5 fw-bold">
+            <span class="text-danger" *ngIf="formdata.controls.lastname.touched && formdata.controls.lastname.invalid">please enter last name</span><br>
+    
+            <label class="form-label">middle Name:</label><br>
+            <input type="text" name="middlename" formControlName="middlename" class="form-control text-capitalize fs-5 fw-bold">
+            <span class="text-danger" *ngIf="formdata.controls.middlename.touched && formdata.controls.middlename.invalid">please enter middle name</span><br>
+    
+            <label class="form-label">age:</label><br>
+            <input type="text" name="age" formControlName="age" class="form-control text-capitalize fs-5 fw-bold">
+            <span class="text-danger" *ngIf="formdata.controls.age.touched && formdata.controls.age.invalid">please enter age</span><br>
+    
+            <label class="form-label">gender:</label><br>
+            <input type="text" name="gender" formControlName="gender" class="form-control text-capitalize fs-5 fw-bold">
+            <span class="text-danger" *ngIf="formdata.controls.gender.touched && formdata.controls.gender.invalid">please enter gender</span><br>
+    
+            <label class="form-label">email:</label><br>
+            <input type="text" name="email" formControlName="email" class="form-control text-capitalize fs-5 fw-bold">
+            <span class="text-danger" *ngIf="formdata.controls.email.touched && formdata.controls.email.invalid">please enter email address</span><br>
+    
+            <label class="form-label">mobile no:</label><br>
+            <input type="text" name="phoneno" formControlName="phoneno" class="form-control text-capitalize fs-5 fw-bold">
+            <span class="text-danger" *ngIf="formdata.controls.phoneno.touched && formdata.controls.phoneno.invalid">please enter mobile number</span><br>
+    
+            <label class="form-label">username:</label><br>
+            <input type="text" name="username" formControlName="username" class="form-control text-capitalize fs-5 fw-bold">
+            <span class="text-danger" *ngIf="formdata.controls.username.touched && formdata.controls.username.invalid">please enter username</span><br>
+    
+            <label class="form-label">password:</label><br>
+            <input type="text" name="password" formControlName="password" class="form-control text-capitalize fs-5 fw-bold">
+            <span class="text-danger" *ngIf="formdata.controls.password.touched && formdata.controls.password.invalid">please enter password</span><br>
+    
+            <label class="form-label">birth date:</label><br>
+            <input type="date" name="date" formControlName="date" class="form-control text-capitalize fs-5 fw-bold" id="">
+            <span class="text-danger" *ngIf="formdata.controls.date.touched && formdata.controls.date.invalid">please enter birth date</span><br>
+    
+            <label class="form-label">image:</label><br>
+            <input type="file" name="image" formControlName="image" class="form-control">
+            <span class="text-danger" *ngIf="formdata.controls.image.touched && formdata.controls.image.invalid">please attach your image</span><br>
+
+    
+            <label class="form-label">address:</label><br>
+            <input type="text" name="address" formControlName="address" class="form-control text-capitalize fs-5 fw-bold">
+            <span class="text-danger" *ngIf="formdata.controls.address.touched && formdata.controls.address.invalid">please enter address</span><br>
+
+            <button type="submit" type="button" class="btn btn-success text-capitalize fs-5 fw-bold" routerLink="/table">save</button>
+        </form>
+    </div>
+    
+</div>
